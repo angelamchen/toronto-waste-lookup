@@ -1,3 +1,8 @@
+h3 {
+  font-size: 25px;
+  font-weight: bold;
+}
+
 .App {
   text-align: center;
 }
@@ -8,14 +13,16 @@
 }
 
 .App-header {
-  background: blue;
-  background: linear-gradient(to right, blue, green);
+  background: #1C5A93;
+  background: linear-gradient(to right, #1C5A93, #24965F);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(40px + 2vmin);
+  font-weight: bold;
   color: white;
+  padding: 0.5em;
 }
 
 .App-link {
