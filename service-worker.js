@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/Toronto-Waste-Lookup/precache-manifest.65ccac292d765824dcea3d79c74f1202.js"
+  "/toronto-waste-lookup/precache-manifest.482e595d5d1380e4beb38ff72859f92d.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/Toronto-Waste-Lookup/index.html", {
+workbox.routing.registerNavigationRoute("/toronto-waste-lookup/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
