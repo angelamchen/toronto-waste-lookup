@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 class Search extends Component {
 
+    //search bar initial state
     constructor(props) {
         super(props);
 
@@ -12,6 +13,7 @@ class Search extends Component {
         this.state = this.initialState;
     }
 
+    // function for when event is changed 
     handleChange = event => {
         this.setState({ searchKey: event.target.value }); 
         
@@ -20,6 +22,7 @@ class Search extends Component {
         }
     }
 
+    // function for submitting the typed entry
     submitForm = (event) => {
         event.preventDefault();
         this.props.handleSubmit(this.state);
