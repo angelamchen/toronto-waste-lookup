@@ -5,7 +5,6 @@ class Search extends Component {
     constructor(props) {
         super(props);
 
-        /* initialize this.initialState into an object */
         this.initialState = {
             searchKey: ''
         };
@@ -13,25 +12,21 @@ class Search extends Component {
         this.state = this.initialState;
     }
 
-    /* event function: event are human interactions e.g. click... */
     handleChange = event => {
-        this.setState({ searchKey: event.target.value }); //everytime state changes, it re renders. allows letters to send
+        this.setState({ searchKey: event.target.value }); 
         
-        // When the search input field is cleared, the list of results should also be cleared function
         if (event.target.value === "") {
-            this.props.handleSubmit({ searchKey: "" }); // often tested in JS. why ===? t
+            this.props.handleSubmit({ searchKey: "" });
         }
     }
-    /* handleSubmitForm -> better naming convention. q: why (event) */
+
     submitForm = (event) => {
         event.preventDefault();
         this.props.handleSubmit(this.state);
     }
 
-    /* no =, rather () meaning it is a method, not a property */
     render() {
-        const { searchKey } = this.state; /* object */
-
+        const { searchKey } = this.state;
         return (
             <div className="pt-4">
                 <form onSubmit={this.submitForm}>
