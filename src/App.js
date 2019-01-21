@@ -24,21 +24,18 @@ class App extends Component {
 
   // function to toggle favourite section
   toggleFavourite = title => {
-    let index = this.state.lookupResult.findIndex((item) => {
+    let index = this.twlData.findIndex((item) => {
       return item.title === title;
     });
-
-    if (this.state.lookupResult[index].IsFavourite) {
-      this.state.lookupResult[index].IsFavourite = false;
-      this.twlData.find((item) => item.title === this.state.lookupResult[index].title).IsFavourite = false;
-    } 
-    else {
-      this.state.lookupResult[index].IsFavourite = true;
-      this.twlData.find((item) => item.title === this.state.lookupResult[index].title).IsFavourite = true;
+    if (this.twlData[index].IsFavourite) {
+      this.twlData[index].IsFavourite = false;
     }
-
+    else {
+      this.twlData[index].IsFavourite = true;
+    }
     let result = this.twlData.filter((item) => { return item.IsFavourite; });
-    this.setState({ favourites: result });
+    this.setState({favourites: result});
+
   };
 
   // function for when user searches something
